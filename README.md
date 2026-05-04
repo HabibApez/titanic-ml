@@ -123,5 +123,6 @@ Notes:
 
 ## Attribution
 
-The script comments reference a Coursera guided project:
+Based on the Coursera guided project: Titanic Survival Prediction Using Machine Learning
+Instructor: Ryan Ahmed
 https://www.coursera.org/projects/titanic-survival-prediction-using-machine-learning
