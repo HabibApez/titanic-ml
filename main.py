@@ -9,7 +9,6 @@
 
 
 # Import key libraries
-from click import style
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -108,7 +107,7 @@ sns.heatmap(titanic_df.isnull(), yticklabels=False, cbar=False, cmap="Blues", ax
 axes[0].set_title("Heatmap of missing values in the Dataset")
 
 # Drop the columns that are not useful for analysis and modeling, such as "Name", "Ticket", "Embarked", "PassengerId" and "Cabin" 
-titanic_df_cleaned = titanic_df.drop(columns=["Name", "Ticket", "Embarked", "PassengerId", "Cabin"], axis=1, inplace=False)
+titanic_df_cleaned = titanic_df.drop(columns=["Name", "Ticket", "Embarked", "PassengerId", "Cabin"], inplace=False)
 print("Columns in the cleaned dataset:", titanic_df_cleaned.columns)
 print("Shape of the cleaned dataset:", titanic_df_cleaned.shape)
 print(titanic_df_cleaned.head())
@@ -182,7 +181,7 @@ print(titanic_df_cleaned)
 # TRAIN LOGISTIC REGRESSION MODEL
 
 # Split the dataset into features (X) and target variable (y)
-X = titanic_df_cleaned.drop(columns=["Survived"], axis=1).values
+X = titanic_df_cleaned.drop(columns=["Survived"]).values
 y = titanic_df_cleaned["Survived"].values
 
 
